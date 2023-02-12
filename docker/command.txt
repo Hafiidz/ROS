@@ -1,0 +1,5 @@
+#from ROS root folder, change directory to docker, run build and tag
+cd docker 
+docker build -t hafiidz/noetic-swarm:v1 .
+docker image ls
+docker run -p 6080:80 --shm-size=512m --name=rosv1 -it hafiidz/noetic-swarm:v1
